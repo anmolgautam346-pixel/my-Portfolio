@@ -230,3 +230,38 @@ if (contactForm) {
         }
     });
 }
+
+// Track Motion Path Animation
+
+// 1. Path setup
+var path = anime.path('#suzukaPath');
+
+// 2. Animation initialize (Paused)
+var scrollAnim = anime({
+    targets: '.f1-car',
+    translateX: path('x'),
+    translateY: path('y'),
+    rotate: path('angle'),
+    easing: 'linear',
+    duration: 1000,
+    autoplay: false
+});
+
+// 3. Scroll Listener
+window.addEventListener('scroll', () => {
+    // Calculate scroll percentage
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollFraction = scrollTop / scrollHeight;
+
+    // Update animation position
+    scrollAnim.seek(scrollAnim.duration * scrollFraction);
+
+    // Optional: Add 'scrolling' class for CSS effects
+    const wrapper = document.getElementById('f1-track-wrapper');
+    if(scrollTop > 10) {
+        wrapper.classList.add('scrolling');
+    } else {
+        wrapper.classList.remove('scrolling');
+    }
+});

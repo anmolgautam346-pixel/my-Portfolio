@@ -6,27 +6,40 @@
     <title>Anmol Gautam | Portfolio</title>
     
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 </head>
 <body>
 
     <div id="vanta-bg"></div>
 
     <nav class="navbar">
-        <div class="logo">Anmol<span>.</span></div>
+        <div class="nav-logo-container" style="display: flex; align-items: center; gap: 10px;">
+    <div id="f1-track-wrapper" style="width: 120px; height: 60px; position: relative;">
+        <svg viewBox="0 0 304 112" style="width: 100%; height: 100%; overflow: visible;">
+            <path id="suzukaPath" 
+                  fill="none" 
+                  stroke="rgba(225, 70, 122, 0.3)" 
+                  stroke-width="3"
+                  d="M189.142857,4 C227.456875,4 248.420457,4.00974888 256.864191,4.00974888 C263.817211,4.00974888 271.61219,3.69583517 274.986231,6.63061513 C276.382736,7.84531176 279.193529,11.3814152 280.479499,13.4815847 C281.719344,15.5064248 284.841964,20.3571626 275.608629,20.3571626 C265.817756,20.3571626 247.262478,19.9013915 243.955117,19.9013915 C239.27946,19.9013915 235.350655,24.7304885 228.6344,24.7304885 C224.377263,24.7304885 219.472178,21.0304113 214.535324,21.0304113 C207.18393,21.0304113 200.882842,30.4798911 194.124187,30.4798911 C186.992968,30.4798911 182.652552,23.6245972 173.457298,23.6245972 C164.83277,23.6245972 157.191045,31.5424105 157.191045,39.1815359 C157.191045,48.466779 167.088672,63.6623005 166.666679,66.9065088 C166.378668,69.1206889 155.842137,79.2568633 151.508744,77.8570506 C145.044576,75.7689355 109.126667,61.6405346 98.7556561,52.9785141 C96.4766876,51.0750861 89.3680347,39.5769094 83.4195005,38.5221785 C80.6048001,38.0231057 73.0179337,38.7426555 74.4158694,42.6956376 C76.7088819,49.1796531 86.3280337,64.1214904 87.1781062,66.9065088 C88.191957,70.2280995 86.4690152,77.0567847 82.2060607,79.2503488 C79.2489435,80.7719756 73.1324132,82.8858479 64.7015706,83.0708761 C55.1604808,83.2802705 44.4254811,80.401884 39.1722168,80.401884 C25.7762119,80.401884 24.3280517,89.1260466 22.476679,94.4501705 C21.637667,96.8629767 20.4337535,108 33.2301959,108 C37.8976087,108 45.0757044,107.252595 53.4789069,103.876424 C61.8821095,100.500252 122.090049,78.119656 128.36127,75.3523302 C141.413669,69.5926477 151.190142,68.4987755 147.018529,52.0784879 C143.007818,36.291544 143.396957,23.4057975 145.221196,19.6589263 C146.450194,17.1346449 148.420955,14.8552817 153.206723,15.7880203 C155.175319,16.1716965 155.097637,15.0525421 156.757598,11.3860986 C158.417558,7.71965506 161.842736,4.00974888 167.736963,4.00974888 C177.205308,4.00974888 184.938832,4 189.142857,4 Z"></path>
+            <circle class="f1-car" r="8" fill="#e1467a"></circle>
+        </svg>
+    </div>
+    <div class="logo">Anmol<span>.</span></div>
+</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">Study</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#portfolio">Projects</a></li>
             <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#about">Study</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
@@ -55,122 +68,80 @@
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2 data-aos="fade-up">Complete <span>Study</span></h2>
-        <div class="study-container">
-            <div class="study-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <div class="dot"></div>
-                        <i class="fas fa-book-reader"></i>
-                        <h4>Primary & Secondary Education</h4>
-                        <p>Ferozepur</p>
-                        <span>Foundational Years</span>
-                    </div>
-                    <div class="card-back">
-                        <h4><span>Schooling Details</span></h4>
-                        <p>Completed foundational schooling in Ferozepur.</p>
-                        <p>Focused on core academic excellence and extracurriculars.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="study-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <div class="dot"></div>
-                        <i class="fas fa-school"></i>
-                        <h4>Higher Secondary (+2)</h4>
-                        <p>DAV Public School, Ropar</p>
-                        <span>Completed 2023</span>
-                    </div>
-                    <div class="card-back">
-                        <h4><span>Specialisation</span></h4>
-                        <p>Integrated Class 12 with NDA exam preparation.</p>
-                        <p>Subjects: Maths, Science, English, and Current Affairs.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="study-card" data-aos="fade-up">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <div class="dot"></div>
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Bachelor of Technology (CSE)</h4>
-                        <p>Rayat Bahra University</p>
-                        <span>2023 - 2027</span>
-                    </div>
-                    <div class="card-back">
-                        <h4><span>Technical Skills</span></h4>
-                        <p>Languages: Python, Java, C++, SQL.</p>
-                        <p>Tools: Power BI, Node.js, and Data Analysis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <section id="skills" class="skills">
-        <h2 data-aos="fade-up">Technical <span>Skills</span></h2>
-        
-        <h3 class="skill-category-title">Languages</h3>
-        <div class="skills-grid">
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('python')"><i class="fab fa-python"></i><p>Python</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('sql')"><i class="fas fa-database"></i><p>SQL</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('java')"><i class="fab fa-java"></i><p>Java</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('cpp')"><i class="fas fa-code"></i><p>C++</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('js')"><i class="fab fa-js"></i><p>JavaScript</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('html')"><i class="fab fa-html5"></i><p>HTML</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('css')"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
-        </div>
+    <h2 data-aos="fade-up">Technical <span>Skills</span></h2>
+    
+    <h3 class="skill-category-title">Languages</h3>
+    <div class="skills-grid">
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('python')"><span><i class="fa-brands fa-python"></i></span><p>Python</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('sql')"><span><i class="fa-solid fa-database"></i></span><p>SQL</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('java')"><span><i class="fa-brands fa-java"></i></span><p>Java</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('cpp')"><span><i class="fa-solid fa-code"></i></span><p>C++</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('js')"><span><i class="fa-brands fa-js"></i></span><p>JavaScript</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('html')"><span><i class="fa-brands fa-html5"></i></span><p>HTML</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('css')"><span><i class="fa-brands fa-css3-alt"></i></span><p>CSS</p></div>
+    </div>
 
-        <h3 class="skill-category-title">Data Analysis</h3>
-        <div class="skills-grid">
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('pandas')"><i class="fas fa-table"></i><p>Pandas</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('numpy')"><i class="fas fa-calculator"></i><p>NumPy</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('matplotlib')"><i class="fas fa-chart-line"></i><p>Matplotlib</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('seaborn')"><i class="fas fa-chart-area"></i><p>Seaborn</p></div>
-        </div>
+    <h3 class="skill-category-title">Data Analysis</h3>
+    <div class="skills-grid">
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('pandas')"><span><i class="fa-solid fa-table"></i></span><p>Pandas</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('numpy')"><span><i class="fa-solid fa-calculator"></i></span><p>NumPy</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('matplotlib')"><span><i class="fa-solid fa-chart-line"></i></span><p>Matplotlib</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('seaborn')"><span><i class="fa-solid fa-chart-area"></i></span><p>Seaborn</p></div>
+    </div>
 
-        <h3 class="skill-category-title">Database Technology</h3>
-        <div class="skills-grid">
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('mysql')"><i class="fas fa-server"></i><p>MySQL</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('mongodb')"><i class="fas fa-leaf"></i><p>MongoDB</p></div>
-        </div>
+    <h3 class="skill-category-title">Database Technology</h3>
+    <div class="skills-grid">
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('mysql')"><span><i class="fa-solid fa-server"></i></span><p>MySQL</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('mongodb')"><span><i class="fa-solid fa-leaf"></i></span><p>MongoDB</p></div>
+    </div>
 
-        <h3 class="skill-category-title">Tools & Others</h3>
-        <div class="skills-grid">
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('dsa')"><i class="fas fa-project-diagram"></i><p>DSA</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('powerbi')"><i class="fas fa-chart-bar"></i><p>Power BI</p></div>
-            <div class="skill-item" data-aos="zoom-in" onclick="openSkill('git')"><i class="fab fa-github"></i><p>Git/GitHub</p></div>
-        </div>
+    <h3 class="skill-category-title">Tools & Others</h3>
+    <div class="skills-grid">
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('dsa')"><span><i class="fa-solid fa-diagram-project"></i></span><p>DSA</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('powerbi')"><span><i class="fa-solid fa-chart-bar"></i></span><p>Power BI</p></div>
+        <div class="skill-item" data-aos="zoom-in" onclick="openSkill('git')"><span><i class="fa-brands fa-github"></i></span><p>Git/GitHub</p></div>
+    </div>
 
-        <div id="skillModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2 id="modalTitle"></h2>
-                <p id="modalDesc"></p>
-                <p id="modalProject"></p>
-            </div>
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <p id="modalProject"></p>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="experience" class="experience">
         <h2 data-aos="fade-up">My <span>Experience</span></h2>
         <div class="experience-container">
             <div class="exp-box" data-aos="fade-left">
                 <div class="exp-content">
-                    <h3>Samsung Innovation Campus</h3>
-                    <p>Designed and delivered a full-stack Shopping Website (SIC Mart) with secure cart management.</p>
+                    <span><h3>Samsung Innovation Campus</h3></span>
+                    <p>Designed and delivered a full-stack Shopping Website <b><span>(SIC Mart)</span></b> with secure cart management.</p>
                 </div>
+                <br>
                 <div class="exp-content">
-                    <h3>Smart India Hackathon (SIH)</h3>
+                     <span><h3>Smart India Hackathon (SIH)</h3></span>
                     <p>Collaborated with a team to solve real-world problems through rapid prototyping.</p>
                 </div>
+                <br>
                 <div class="exp-content">
-                    <h3>Data Visualization</h3>
-                    <p>Created interactive Power BI Dashboards using custom slicers and advanced reporting.</p>
+                    <span><h3>Building Responsive Website</h3></span>
+                    <p>Created Responsive-Interactive <b><span>Portfolio</span></b> using <b><span>JavaScript,CSS,HTML</span></b> that helps you to Connect with Me.</p>
+                </div>
+                <br>
+                <div class="exp-content">
+                    <span><h3>Zomathon</h3></span>
+                    <p>Pitch a strong idea to overcome the husstle of a <b><span>Zomato</span></b> rider & To Raise their Sales by using Analytical Thinking, Collaborative problem-solving & Data Driven Decision Making.</p>
+                </div>
+                <br>
+                <div class="exp-content">
+                    <span><h3>Data Visualization</h3></span>
+                    <p>Created interactive <b><span>Power BI</span></b> & <b><span>Excel</span></b> Dashboards using custom slicers and advanced reporting.</p>
                 </div>
             </div>
         </div>
@@ -255,21 +226,86 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2 data-aos="fade-up">Contact <span>Me</span></h2>
-        <div class="contact-container">
-            <form id="contact-form" data-aos="fade-right">
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
-                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
-            </form>
-            <div class="socials" data-aos="fade-left">
-                <a href="https://www.linkedin.com/in/anmol-gautam-606034311/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/anmolgautam346-pixel" target="_blank"><i class="fab fa-github"></i></a>
+     <section id="about" class="about">
+        <h2 data-aos="fade-up">Complete <span>Study</span></h2>
+        <div class="study-container">
+            <div class="study-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="dot"></div>
+                        <i class="fas fa-book-reader"></i>
+                        <h4>Primary & Secondary Education</h4>
+                        <p>Ferozepur</p>
+                        <span>Foundational Years</span>
+                    </div>
+                    <div class="card-back">
+                        <h4><span>Schooling Details</span></h4>
+                        <p>Completed foundational schooling in Ferozepur.</p>
+                        <p>Focused on core academic excellence and extracurriculars.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="dot"></div>
+                        <i class="fas fa-school"></i>
+                        <h4>Higher Secondary (+2)</h4>
+                        <p>DAV Public School, Ropar</p>
+                        <span>Completed 2023</span>
+                    </div>
+                    <div class="card-back">
+                        <h4><span>Specialisation</span></h4>
+                        <p>Integrated Class 12 with NDA exam preparation.</p>
+                        <p>Subjects: Maths, Science, English, and Current Affairs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="dot"></div>
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Bachelor of Technology (CSE)</h4>
+                        <p>Rayat Bahra University</p>
+                        <span>2023 - 2027</span>
+                    </div>
+                    <div class="card-back">
+                        <h4><span>Technical Skills</span></h4>
+                        <p>Languages: Python, Java, C++, SQL.</p>
+                        <p>Tools: Power BI, Node.js, and Data Analysis.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section id="contact" class="contact">
+    <h2 data-aos="fade-up">Contact <span>Me</span></h2>
+
+    <div class="contact-container">
+        
+        <form id="contact-form" data-aos="fade-right">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
+        </form>
+
+        <div class="socials" data-aos="fade-left">
+            <a href="https://www.linkedin.com/in/anmol-gautam-606034311/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/anmolgautam346-pixel" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 Anmol Gautam | All Rights Reserved.</p>
@@ -277,6 +313,18 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+   <div class="fab-container">
     
+    <a href="assets/Anmol_Gautam_Resume.pdf" download class="fab resume-fab" title="Download Resume">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span class="fab-text">Download CV</span>
+    </a>
+
+    <a href="#contact" class="fab contact-fab" title="Contact Me">
+        <i class="fa-solid fa-comment-dots"></i>
+    </a>
+
+</div>
+</div>
 </body>
 </html>
