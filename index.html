@@ -39,7 +39,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#achievements">Recognition</a></li>
             <li><a href="#about">Study</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -265,16 +265,58 @@
     </div>
 </section>
 
-    <section id="achievements" class="achievements">
-        <h2 data-aos="fade-up">My <span>Achievements</span></h2>
-        <div class="achieve-grid">
-            <div class="achieve-card" data-aos="flip-up">
-                <i class="fas fa-trophy"></i>
-                <h3>SIC Hackathon Winner</h3>
-                <p>Secured <span>3rd</span> Rank in college Hackathon Conducted by SIC.</p>
-            </div>
+   <section id="achievements" class="achievements">
+    <h2 data-aos="fade-up">My <span>Recognition</span></h2>
+
+    <div class="tab-container" data-aos="fade-up">
+    <button class="tab-btn active" onclick="filterAchieve('all', this)">All</button>
+    <span class="separator">;</span>
+    <button class="tab-btn" onclick="filterAchieve('award', this)">Achievements</button>
+    <button class="tab-btn" onclick="filterAchieve('cert', this)">Certifications</button>
+</div>
+    
+    <div class="achieve-grid">
+        <div class="achieve-card award" data-aos="zoom-in">
+            <div class="card-badge">Award</div>
+            <div class="achieve-icon"><i class="fas fa-rocket"></i></div>
+            <h3>Zomathon Participant</h3>
+            <p>Represented Team <b>SnackOverflow</b> in Zomathon. Focused on analytical thinking to boost sales.</p>
+            <a href="assets/zomathon_cert.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> View Proof</a>
         </div>
-    </section>
+
+        <div class="achieve-card award" data-aos="zoom-in">
+            <div class="card-badge">Rank 3</div>
+            <div class="achieve-icon"><i class="fas fa-trophy"></i></div>
+            <h3>SIC Hackathon Winner</h3>
+            <p>Secured <b>3rd Rank</b> in the Samsung Innovation Campus college hackathon.</p>
+            <a href="assets/sic_award.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> View Proof</a>
+        </div>
+
+        <div class="achieve-card cert" data-aos="zoom-in">
+            <div class="card-badge">Certified</div>
+            <div class="achieve-icon"><i class="fa-brands fa-js"></i></div>
+            <h3>JavaScript Developer</h3>
+            <p>Professional course completion via <b>Infosys Springboard</b>. Verified technical proficiency.</p>
+            <a href="assets/infosys_js.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
+        </div>
+
+        <div class="achieve-card cert" data-aos="zoom-in">
+            <div class="card-badge">2025</div>
+            <div class="achieve-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <h3>Exploratory Data Analysis</h3>
+            <p>Completed EDA specialization on Springboard, powered by <b>Infosys</b>.</p>
+            <a href="assets/infosys_eda.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
+        </div>
+
+        <div class="achieve-card cert" data-aos="zoom-in">
+            <div class="card-badge">Certified</div>
+            <div class="achieve-icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python for Data Science</h3>
+            <p>Advanced data science modules completed through <b>Infosys Springboard</b>.</p>
+            <a href="assets/infosys_python.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
+        </div>
+    </div>
+</section>
 
      <section id="about" class="about">
         <h2 data-aos="fade-up">Complete <span>Study</span></h2>

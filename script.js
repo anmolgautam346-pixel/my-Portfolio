@@ -265,3 +265,26 @@ window.addEventListener('scroll', () => {
         wrapper.classList.remove('scrolling');
     }
 });
+
+function filterAchieve(category, btn) {
+    const cards = document.querySelectorAll('.achieve-card');
+    const btns = document.querySelectorAll('.tab-btn');
+    
+    // 1. Button active state toggle
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // 2. Class-based filtering (Structure safe)
+    cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+            card.classList.remove('hidden'); // Card wapas aa jayega line mein
+        } else {
+            card.classList.add('hidden'); // Card space chhod dega
+        }
+    });
+
+    // 3. AOS Refresh (if using)
+    if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+    }
+}

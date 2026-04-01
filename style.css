@@ -732,3 +732,149 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     inset: 0;
     background: linear-gradient(transparent, rgba(0,0,0,0.6));
 }
+
+/* Achievements and Certification Section */
+
+/* Achievements Section Styling */
+.achievements {
+    padding: 100px 10% !important;
+    text-align: center;
+}
+
+.separator{
+    cursor: default;
+    align-self: flex-end;
+    color: white;
+    font-weight: bold;
+}
+.achieve-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important; /* Cards left se start honge (Position 1, 2...) */
+    gap: 25px !important;
+    max-width: 1200px;
+    margin: 50px auto 0 auto !important;
+    padding-left: 40px;
+}
+
+.achieve-card {
+    /* Width: Isse card kitna wide hoga wo set hoga */
+    /* 300px = Chota card, 350px = Medium (Standard), 400px = Bada card */
+    width: 320px !important; 
+
+    /* LAMBAI (Height): Taaki saare cards ek hi line mein barabar dikhen */
+    /* Agar content (text) zyada hai toh isse badha dena */
+    min-height: 400px !important; 
+
+    /* Baki properties waisi hi rehne do */
+    border-radius: 20px; 
+    background-color: #121212 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 25px !important;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Isse card layout se poori tarah hat jayega bina structure bigade */
+.achieve-card.hidden {
+    display: none !important;
+}
+
+/* .achieve-card:hover {
+    transform: translateY(-10px) !important;
+    background: rgba(225, 70, 122, 0.1) !important;
+    border-color: #e1467a !important;
+} */
+
+.achieve-card:hover {
+    background-color: #1a1a1a !important;
+    border-color: #e1467a !important;
+}
+
+.achieve-icon {
+    font-size: 45px !important;
+    color: #e1467a !important;
+    margin-bottom: 20px !important;
+}
+
+.achieve-card h3 {
+    color: #fff !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 15px !important;
+}
+
+.achieve-card p {
+    color: #ccc !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+}
+
+.achieve-card p span {
+    color: #e1467a !important;
+    font-weight: 600;
+}
+
+.tab-container { 
+    margin-bottom: 40px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; /* Default center rakho */
+    gap: 15px; 
+}
+.tab-btn {
+    padding: 10px 25px;
+    border: 1px solid #e1467a;
+    background: transparent;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tab-btn.active, .tab-btn:hover { background: #e1467a; box-shadow: 0 0 15px #e1467a; }
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(225, 70, 122, 0.2);
+    color: #e1467a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cert-dl-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 18px;
+    background: #e1467a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.cert-dl-btn:hover { transform: scale(1.05); background: #ff5e94; }
+
+.achieve-card {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
