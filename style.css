@@ -180,54 +180,94 @@ span, .highlight { color: var(--main-color); }
 /* =========================================================
    4. STUDY SECTION (3D CARDS)
    ========================================================= */
+
+/* --- New Study Section Layout --- */
+
 h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
-
-.study-container { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem; 
-    width: 100%;
-}
-
-.study-card {
-    height: 400px;
-    perspective: 1000px;
-}
-
-.card-inner {
+.study-section {
+    padding: 8rem 10% 5rem; /* Baki sections ke barabar padding */
+    background: transparent !important; /* Isse Vanta background peeche dikhne lagega */
     position: relative;
+    z-index: 1; /* Taaki content animation ke upar rahe */
     width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
 }
 
-.study-card:hover .card-inner { transform: rotateY(180deg); }
+/* Timeline alignment fix taaki wo 'Complete Study' text ke neeche sahi dikhe */
+.timeline-wrapper {
+    position: relative;
+    margin-top: 50px; /* Text se thoda distance */
+}
 
-.card-front, .card-back {
+/* Timeline Line ko dots ke center mein lao */
+.timeline-line {
     position: absolute;
-    width: 100%; height: 100%;
-    backface-visibility: hidden;
-    border-radius: 2rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    top: 7px; /* Isse dots ke theek peeche set karo */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(225, 70, 122, 0.3);
+    z-index: 1;
 }
 
-.card-front { background: var(--second-bg-color); }
-.card-back { 
-    background: var(--main-color); 
-    transform: rotateY(180deg); 
-    color: white;
+
+/* Container ko 3 columns mein force karo */
+.study-container-new {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Force 3 columns */
+    gap: 20px !important;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* margin-top: 10px; */
 }
 
-.card-front i { font-size: 3.5rem; color: var(--main-color); margin-bottom: 1.5rem; }
-.card-back h4 { font-size: 1.5rem; margin-bottom: 1rem; }
+/* Dots on the Line */
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: #333;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 2px solid var(--bg-color);
+    transition: 0.3s;
+}
 
+.study-card-new:hover .timeline-dot, .timeline-dot.active {
+    background: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transform: scale(1.3);
+}
+
+/* Individual Card ka size fix karo */
+.study-card-new {
+    width: 100% !important; 
+    text-align: left;
+}
+
+.study-content {
+    background: #121212 !important; /* Slightly lighter than pure black for visibility */
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(225, 70, 122, 0.1);
+    min-height: 350px; /* Sab cards ki height ek jaisi rakho */
+    transition: 0.3s;
+}
+
+.study-content i {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.study-card-new:hover .study-content {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    background: #1a1a1a;
+}
+
+.study-year{
+    margin-bottom: 14px;
+}
 
 /* =========================================================
    5. NEW PORTFOLIO (Alternating Side-by-Side Layout)
@@ -407,6 +447,8 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     box-shadow: 0 5px 15px rgba(225, 70, 122, 0.4);
 }
 
+
+
 /* Modal Styles */
 .modal {
     display: none;
@@ -541,6 +583,11 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     bottom: 40px;  /* increase from 30px */
     right: 25px;
     z-index: 1000;
+
+    /* Ye do lines unhe vertical kar dengi */
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; /* Dono buttons ke beech ka gap */
 }
 
 .fab {
@@ -555,6 +602,59 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     font-size: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     text-decoration: none;
+}
+
+.fab {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex !important;       /* Sabse important line */
+    align-items: center !important;  /* Vertically center */
+    justify-content: center !important; /* Horizontally center */
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: visible; /* Taaki icon circle se bahar na nikle */
+
+    color: white !important;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+/* Individual Icon styling taaki wo circle ke andar fit ho */
+.fab i, .fab img {
+    font-size: 24px; /* Icon ka size adjust karein */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important; /* Purana margin hatao */
+    padding: 0 !important; /* Purana padding hatao */
+}
+
+/* Initially text ko hide karo */
+.fab span { 
+    position: absolute;
+    right: 75px; /* Button ke left side mein slide hoga */
+    background: var(--main-color);   
+    /* #1a1a1a */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(15px);
+    transition: 0.7s ease;
+    pointer-events: none; /* Taaki text hover block na kare */
+}
+
+/* Hover karte hi label display hoga */
+.fab:hover span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .resume-fab {
@@ -878,3 +978,4 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
