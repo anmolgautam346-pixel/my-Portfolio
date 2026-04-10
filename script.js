@@ -209,7 +209,7 @@ if (contactForm) {
 
         try {
             // Replace with your actual backend URL if different
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch('https://anmol-portfolio-api.onrender.com/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
