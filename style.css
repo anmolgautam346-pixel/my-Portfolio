@@ -5,9 +5,14 @@ html {
 /* White Paper Airplane - https://www.cursors-4u.com/cursor/white-paper-airplane */
 
 /* 1. Global change for everything */
-* {
+/* * {
     cursor: url('https://cdn.cursors-4u.net/previews/paper-airplane-19477b19-32.webp') 16 16, auto !important;
+} */
+
+* {
+  cursor: url('https://cdn.cursors-4u.net/css-previews/pink-electricity-lightning-c78cedc5-css.webp') 0 0, auto !important;
 }
+
 
 /* 2. Specifically targeting interactive elements where it turns normal */
 a, 
