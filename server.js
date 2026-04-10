@@ -64,28 +64,3 @@ app.post('/api/contact', async (req, res) => {
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
 
 
-/* for Recognisation Section */
-
-
-// function filterAchieve(category) {
-//     const cards = document.querySelectorAll('.achieve-card');
-//     const btns = document.querySelectorAll('.tab-btn');
-    
-//     // 1. Update Active Button State
-//     btns.forEach(btn => {
-//         btn.classList.remove('active');
-//         // Check matching text or category to keep it active
-//         if(btn.getAttribute('onclick').includes(category)) {
-//             btn.classList.add('active');
-//         }
-//     });
-
-//     // 2. Filter Cards with Grid Support
-//     cards.forEach(card => {
-//         if (category === 'all' || card.classList.contains(category)) {
-//             card.style.display = 'block'; // Or 'flex' based on your card internal CSS
-//         } else {
-//             card.style.display = 'none';
-//         }
-//     });
-// }

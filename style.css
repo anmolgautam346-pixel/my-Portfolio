@@ -1,3 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* White Paper Airplane - https://www.cursors-4u.com/cursor/white-paper-airplane */
+
+/* 1. Global change for everything */
+* {
+    cursor: url('https://cdn.cursors-4u.net/previews/paper-airplane-19477b19-32.webp') 16 16, auto !important;
+}
+
+/* 2. Specifically targeting interactive elements where it turns normal */
+a, 
+button, 
+input[type="submit"], 
+input[type="button"], 
+.social-icons a, 
+.fab, 
+.btn,
+.nav-links a {
+    cursor: url('https://cdn.cursors-4u.net/previews/paper-airplane-19477b19-32.webp') 16 16, pointer !important;
+}
+
 /* =========================================================
    1. VARIABLES & CORE RESET
    ========================================================= */
@@ -5,7 +28,8 @@
     --bg-color: #080808;
     --second-bg-color: #131313;
     --text-color: #fff;
-    --main-color: #e1467a; /* Signature Pink */
+    --main-color: #e1467a;
+     /* Signature Pink */
     --accent-blue: #00d2ff;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -355,6 +379,8 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
 /* =========================================================
    6. SKILLS SECTION
    ========================================================= */
+
+   
 .skill-category-title {
     margin: 3rem 0 1.5rem;
     color: var(--main-color);
@@ -384,7 +410,19 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     background: rgba(225, 70, 122, 0.05);
 }
 
-.skill-item i { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+/* .skill-item i { font-size: 2.5rem; margin-bottom: 10px; display: block; } */
+
+.skills-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 20px;    /* Isse 10px badha kar 20px ya 25px kar do */
+    display: block;         /* Ensure karo ki icon apni alag line le raha hai */
+}
+
+.skills-box h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;       /* Extra gap icon aur heading ke beech */
+}
 
 /* =========================================================
    7. CONTACT & MODAL
@@ -748,18 +786,23 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
     height: 50px;
     background: #e1467a;
     border-radius: 50%;
-    display: flex; /* Flexbox is key */
+    display: flex; 
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 22px;
     transition: 0.3s;
     text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
 .social-icons a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(225, 70, 122, 0.4);
+    background: #e1467a;
+    /* Isse exact 'Send Message' jaisa heavy neon glow aayega */
+    box-shadow: 0 0 20px #e1467a, 0 0 40px #e1467a, 0 0 60px #e1467a;
+    color: white;
 }
 
 
