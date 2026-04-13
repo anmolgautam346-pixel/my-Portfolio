@@ -44,15 +44,19 @@
             <li><a href="#study">Study</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <!-- <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div> -->
+         <div class="hamburger" id="menu-icon">
+    <i class='bx bx-menu' id="open-icon"></i>
+    <i class='bx bx-x' id="close-icon"></i> 
+</div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text" data-aos="fade-right">
-                <h3>SDE & DATA ANALYST</h3>
+                <h3>FS-Dev & DATA ANALYST</h3>
                 <h1>Hi, I'm <span class="highlight">Anmol Gautam</span><br>from INDIA</h1>
-                <p>Fresher in Experience but Enthusiast in Work. ( Python, Java, C++, SQL, HTML, CSS, JS and Data Visualization ).</p>
+                <p>Enthusiast 3rd-year B.Tech CSE Student with Strong interest in Software Building, Data Analysis & Solving real-world problems.</p>
                 <div id="eye-container"></div>
                 <div class="hero-btns">
                     <a href="#contact" class="btn-primary">Hire Me</a>
@@ -77,7 +81,7 @@
         <!-- LEFT SIDE (CREATIVE VISUAL CARD) -->
         <div class="about-visual" data-aos="fade-right">
     <div class="image-box">
-        <img src="assets/portfolio image.jpg" alt="About Me">
+        <img src="images/portfolio image.jpg" alt="About Me">
     </div>
 </div>
 
@@ -88,7 +92,7 @@
                 <h1>Who I <span>Am</span></h2>
                 <p>
                     I am a passionate and motivated Computer Engineering student
-                    with a strong interest in technology, innovation, and entrepreneurship.
+                    with a strong interest in Data Analysis, Building Softwares and Enterprise level Web Applications.
                 </p>
             </div>
 
@@ -96,14 +100,14 @@
                 <h1>What I <span>Study</span></h2>
                 <p>
                     Currently pursuing B.Tech in Computer Engineering, learning
-                    software development, AI, and modern web technologies.
+                    software development, Data Analysis, and modern web technologies.
                 </p>
             </div>
 
             <div class="about-box">
                 <h1>My <span>Interests</span></h2>
                 <p>
-                    Deeply interested in Web Development, AI, and building
+                    Deeply interested in Web Development, Data Analysis, and building
                     real-world impactful solutions along with entrepreneurship.
                 </p>
             </div>
@@ -111,8 +115,7 @@
             <div class="about-box">
                 <h1>My <span>Goal</span></h2>
                 <p>
-                    To create AI-powered solutions that solve real-world problems,
-                    especially in agriculture and rural development.
+                    Leverage my Analytical thinking in the various Domains & Building Enterprise Level Web Applications that Solve real-world Problems.
                 </p>
             </div>
 
@@ -290,7 +293,7 @@
             <div class="achieve-icon"><i class="fas fa-trophy"></i></div>
             <h3>SIC Hackathon Winner</h3>
             <p>Secured <b>3rd Rank</b> in the Samsung Innovation Campus college hackathon.</p>
-            <a href="assets/sic_award.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> View Proof</a>
+            <a href="images/SIC_3rd_prize.jpeg" download class="cert-dl-btn"><i class="fas fa-download"></i> View Proof</a>
         </div>
 
         <div class="achieve-card cert" data-aos="zoom-in">
@@ -298,7 +301,7 @@
             <div class="achieve-icon"><i class="fa-brands fa-js"></i></div>
             <h3>JavaScript Developer</h3>
             <p>Professional course completion via <b>Infosys Springboard</b>. Verified technical proficiency.</p>
-            <a href="assets/infosys_js.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
+            <a href="assets/JS_infosys.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
         </div>
 
         <div class="achieve-card cert" data-aos="zoom-in">
@@ -312,9 +315,9 @@
         <div class="achieve-card cert" data-aos="zoom-in">
             <div class="card-badge">Certified</div>
             <div class="achieve-icon"><i class="fa-brands fa-python"></i></div>
-            <h3>Python for Data Science</h3>
-            <p>Advanced data science modules completed through <b>Infosys Springboard</b>.</p>
-            <a href="assets/infosys_python.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
+            <h3>Coding & Programming</h3>
+            <p>Learnt Python & its various Libraries, completed through <b>Samsung</b>.</p>
+            <a href="assets/SIC certificate.pdf" download class="cert-dl-btn"><i class="fas fa-download"></i> Certificate</a>
         </div>
     </div>
 </section>
@@ -399,6 +402,7 @@
             <input type="email" id="email" placeholder="Email Address" required>
             <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
+            
         </form>
 
         <div class="socials" data-aos="fade-left">
@@ -442,5 +446,10 @@
 
 </div>
 </div>
+
+<!-- the specific script for smooth scroll  -->
+ 
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
 </body>
 </html>

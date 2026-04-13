@@ -1,3 +1,5 @@
+
+
 /* =========================================================
    1. CORE INITIALIZATION & VANTA BACKGROUND
    ========================================================= */
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scaleMobile: 1.00,
             color: 0xe1467a,      // Signature Pink
             backgroundColor: 0x080808, 
-            points: 12.00,        // Slightly increased for better density
+            points: 10.00,        // Slightly increased for better density
             maxDistance: 22.00,
             spacing: 16.00
         });
@@ -288,3 +290,42 @@ function filterAchieve(category, btn) {
         AOS.refresh();
     }
 }
+
+
+// Ise script.js ke ekdum bottom (aakhiri) mein dalo
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+const menuIcon = document.querySelector('#menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.onclick = () => {
+    // Ye line toggle karegi hamburger aur X ke beech mein
+    menuIcon.classList.toggle('active'); 
+    navLinks.classList.toggle('active');
+};
+
+// Takki link click karte hi menu band ho jaye
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.onclick = () => {
+        menuIcon.classList.remove('active');
+        navLinks.classList.remove('active');
+    };
+});
