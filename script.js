@@ -50,14 +50,33 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================= */
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
+    const openIcon = document.getElementById('open-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    // Menu ko toggle karo (active class add/remove hogi)
     navLinks.classList.toggle('active');
+
+    // Icons ko toggle karo
+    if (navLinks.classList.contains('active')) {
+        openIcon.style.display = 'none'; // Hamburger gayab
+        closeIcon.style.display = 'block'; // X (Cross) dikhega
+    } else {
+        openIcon.style.display = 'block'; // Hamburger wapas
+        closeIcon.style.display = 'none'; // X gayab
+    }
 }
 
-// Close menu when link is clicked
+// Har link par click hone par menu apne aap band ho jayega
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('active');
-    });
+    link.onclick = () => {
+        const navLinks = document.querySelector('.nav-links');
+        const openIcon = document.getElementById('open-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        navLinks.classList.remove('active');
+        openIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    };
 });
 
 // Image Stack Shuffling (Hero Section)

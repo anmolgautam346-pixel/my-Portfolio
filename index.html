@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -45,10 +45,9 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <!-- <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div> -->
-         <div class="hamburger" id="menu-icon">
+         <div class="hamburger" onclick="toggleMenu()">
     <i class='bx bx-menu' id="open-icon"></i>
-    <i class='bx bx-x' id="close-icon"></i> 
-</div>
+    <i class='bx bx-x' id="close-icon" style="display: none;"></i> </div>
     </nav>
 
     <section id="home" class="hero">

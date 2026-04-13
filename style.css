@@ -599,9 +599,23 @@ h2 { text-align: center; font-size: 3rem; margin-bottom: 4rem; color: white; }
         font-size: 2.5rem;
         color: var(--main-color);
     }
-
-
+      
+    .hamburger {
+        display: block !important; /* Force visible */
+        color: #ffffff;            /* Background black hai toh white color rakho */
+        font-size: 32px;           /* Size itna ho ki dikhe */
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;             /* Taaki kisi layer ke piche na chhup jaye */
+    }
+    
+    /* Ensure icons inside have size */
+    .hamburger i {
+        display: block;
+    }
 }
+
+
 
 /* to move the top left logo with dot */
 
